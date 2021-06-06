@@ -1,0 +1,16 @@
+<mat-card class="block">
+    <form class="example-form" [formGroup]="filmEditForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Názov" formControlName="filmName">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Rok" type="number" formControlName="year">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Slovenský názov" formControlName="slovakName">
+        </mat-form-field>
+        <button [disabled]="filmEditForm?.invalid" mat-raised-button type="submit" value="submit"
+                style="background: #44bd32;color: white">Uložiť
+        </button>
+    </form>
+</mat-card>
